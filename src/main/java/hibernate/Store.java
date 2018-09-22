@@ -21,6 +21,9 @@ public class Store {
     @OneToMany(mappedBy = "store")
     private Set<Inventory> inventories;
 
+    @ManyToMany(mappedBy = "store")
+    private Set<Staff> staff;
+
     public Store(int store_id, int manager_staff_id, int address_id) {
         this.store_id = store_id;
         this.manager_staff_id = manager_staff_id;
